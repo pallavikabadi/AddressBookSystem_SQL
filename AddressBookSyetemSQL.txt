@@ -123,4 +123,36 @@ tname ASC;
 +-----------+
 2 rows in set (0.00 sec)
 
+#UC9::
+
+mysql> alter table addressbook_table add column addressbook_name varchar(20) aft
+er lastname;
+Query OK, 0 rows affected (0.24 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table addressbook_table add column type varchar(20) after addressbo
+ok_name;
+Query OK, 0 rows affected (0.33 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> update addressbook_table set addressbook_name = 'abc',type = 'Friends' wh
+ere firstname in ('Sunil','Ajit');
+Query OK, 2 rows affected (0.03 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> update addressbook_table set addressbook_name = 'xyz',type = 'Family' whe
+re firstname in ('Pallavi');
+Query OK, 1 row affected (0.03 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from addressbook_table;
++-----------+----------+------------------+---------+--------------+-------+-------------+--------+--------------+---------------------------+
+| firstname | lastname | addressbook_name | type    | address      | city  | state       | zip    | phone_number | email                     |
++-----------+----------+------------------+---------+--------------+-------+-------------+--------+--------------+---------------------------+
+| Pallavi   | Jadhav   | xyz              | Family  | Wakad Bridge | Pune  | Maharashtra |  12345 | 9997895679   | pallavi08jadhav@gmail.com |
+| Sunil     | Kabadi   | abc              | Friends | Baner        | Pune  | Maharashtra |  45678 | 989898878    | sunil@gmail.com           |
+| Ajit      | Jadhav   | abc              | Friends | Dahigaon     | Nagar | Maharashtra | 478963 | 8888899999   | ajit@gmail.com            |
++-----------+----------+------------------+---------+--------------+-------+-------------+--------+--------------+---------------------------+
+3 rows in set (0.00 sec)
+
 mysql>
