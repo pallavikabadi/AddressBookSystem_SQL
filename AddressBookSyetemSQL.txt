@@ -111,4 +111,16 @@ mysql> select count(city),count(state) from addressbook_table where city = 'Pune
 +-------------+--------------+
 1 row in set (0.02 sec)
 
+#UC8::
+
+mysql> select firstname from addressbook_table where city = 'Pune' order by firs
+tname ASC;
++-----------+
+| firstname |
++-----------+
+| Pallavi   |
+| Sunil     |
++-----------+
+2 rows in set (0.00 sec)
+
 mysql>
