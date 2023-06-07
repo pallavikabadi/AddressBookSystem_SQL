@@ -80,5 +80,14 @@ mysql> select * from addressbook_table;
 +-----------+----------+--------------+-------+-------------+--------+--------------+---------------------------+
 3 rows in set (0.00 sec)
 
-mysql>
+#UC6:
 
+mysql> select city,state from addressbook_table where firstname = 'Sunil';
++------+-------------+
+| city | state       |
++------+-------------+
+| Pune | Maharashtra |
++------+-------------+
+1 row in set (0.00 sec)
+
+mysql>
