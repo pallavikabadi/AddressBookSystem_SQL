@@ -172,3 +172,22 @@ mysql> select count(type) from addressbook_table where type = 'Friends';
 |           2 |
 +-------------+
 1 row in set (0.00 sec)
+
+mysql> insert into addressbook_table values('Madhu','shinde','xyz','Family','Agra','Agra','Uttar Pradesh',25896,777888999,'madhu@gmail.com'),('Sairaj','Kale','abc','Friends','Royal Oak','Harduwa','Madhya Pradesh',14569,888999700,'sai@gmail.com');
+Query OK, 2 rows affected (0.07 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from addressbook_table;
++-----------+----------+------------------+---------+--------------+---------+----------------+--------+--------------+---------------------------+
+| firstname | lastname | addressbook_name | type    | address      | city    | state          | zip    | phone_number | email                     |
++-----------+----------+------------------+---------+--------------+---------+--
+--------------+--------+--------------+---------------------------+
+| Pallavi   | Jadhav   | xyz              | Family  | Wakad Bridge | Pune    | Maharashtra    |  12345 | 9997895679   | pallavi08jadhav@gmail.com |
+| Sunil     | Kabadi   | abc              | Friends | Baner        | Pune    | Maharashtra    |  45678 | 989898878    | sunil@gmail.com           |
+| Ajit      | Jadhav   | abc              | Friends | Dahigaon     | Nagar   | Maharashtra    | 478963 | 8888899999   | ajit@gmail.com            |
+| Madhu     | shinde   | xyz              | Family  | Agra         | Agra    | Uttar Pradesh  |  25896 | 777888999    | madhu@gmail.com           |
+| Sairaj    | Kale     | abc              | Friends | Royal Oak    | Harduwa | Madhya Pradesh |  14569 | 888999700    | sai@gmail.com             |
++-----------+----------+------------------+---------+--------------+---------+----------------+--------+--------------+---------------------------+
+5 rows in set (0.00 sec)
+
+mysql>
